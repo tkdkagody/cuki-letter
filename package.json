@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku-prebuild":"cd cukiletter && npm ci && npm run build && mv build ../server",
-    "start":"cd server && npm ci && node app.js",
+    "client-build":"cd cukiletter && npm ci && npm run build && cd ../",
+    "server-build":"cd server && npm ci npm run build && cd ../",
+    "heroku-prebuild":"npm run client-build && npm run server-build && mv ./cukiletter/build ./server/src/build",
+    "start":"cd server && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
