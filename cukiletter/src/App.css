@@ -1,0 +1,9 @@
+@font-face {
+  font-family: BlackBase;
+  src: url("./style/fonts/Pretendard-Black.woff");
+}
+
+@font-face {
+  font-family: BlackBold;
+  src: url("./style/fonts/Pretendard-Bold.woff");
+}
