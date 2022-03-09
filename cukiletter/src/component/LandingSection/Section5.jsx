@@ -95,7 +95,7 @@ const Img = styled.img`
 const Text1 = styled.div`
     margin: 0.5rem 0;
     padding: 0.2rem 0.5rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold; 
     font-family: 'BlackBase';
     text-align: center;
@@ -107,23 +107,23 @@ const Text1 = styled.div`
         font-size: 2rem;
     }
     @media ${(props)=> props.theme.tabletS} {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     @media ${(props)=> props.theme.mobileL} {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 `;
 
 const Text2 = styled.div`
     margin: 1rem 0;
     padding: 0.2rem 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: 'BlackBase';
     text-align: center;
-    line-height: 1.8;
+    line-height: 1.5;
     @media ${(props)=> props.theme.tabletL} {
         font-size: 1.3rem;
     }
@@ -134,10 +134,11 @@ const Text2 = styled.div`
         font-size: 1.3rem;
     }
     @media ${(props)=> props.theme.mobileL} {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
-`;  
+`; 
+
 

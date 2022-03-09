@@ -60,17 +60,16 @@ const Text2 = styled.div`
     font-size: 3.2rem;
     font-family: 'BlackBold';
     @media ${(props)=> props.theme.tabletL} {
-        font-size: 3.5rem;
-     
+        font-size: 3rem;
     }
     @media ${(props)=> props.theme.tabletM} {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     @media ${(props)=> props.theme.tabletS} {
         font-size: 3rem;
     }
     @media ${(props)=> props.theme.mobileL} {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     @media ${(props)=> props.theme.mobileM} {
         font-size: 3rem;
@@ -91,7 +90,7 @@ const Text3 = styled.div`
         font-size: 2rem;
     }
     @media ${(props)=> props.theme.tabletS} {
-        font-size: 2.2rem;
+        font-size:  2rem;
     }
     @media ${(props)=> props.theme.mobileL} {
         font-size: 2rem;
