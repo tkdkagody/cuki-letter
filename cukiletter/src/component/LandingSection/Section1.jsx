@@ -46,18 +46,12 @@ const ImageBox = styled.div`
     justify-content: center;
 `;
 const Img = styled.img`
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     object-fit: cover;
-    @media ${(props)=> props.theme.tabletM} {
-        width: 80%;
-    }
-    @media ${(props)=> props.theme.tabletS} {
-        width: 80%;
 
-    }
 `;
 
 const Text2 = styled.div`

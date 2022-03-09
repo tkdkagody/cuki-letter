@@ -27,7 +27,7 @@ const Container = styled.div`
     width: 85%;
     height: 100vh;
     padding: 2rem 0.2rem;
-    background-color: #fcfbf6;  //섹션백그라운드
+    background-color: #fafaf0;  //섹션백그라운드
     display: flex;
     flex-direction: column;
     align-items: center;

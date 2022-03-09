@@ -26,7 +26,7 @@ const Container = styled.div`
     width: 85%;
     height: 80vh;
     padding: 2rem 0.2rem;
-    background-color: #fcfbf6;  //섹션백그라운드
+    background-color: #fafaf0;  //섹션백그라운드
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -34,12 +34,15 @@ const Container = styled.div`
     @media ${(props)=> props.theme.tabletS} {
         flex-direction: column;
         height: 60rem;
+        padding: 5rem;
     }
     @media ${(props)=> props.theme.mobileL} {
         height: 55rem;
+        padding: 3rem;
     }
     @media ${(props)=> props.theme.mobileM} {
         height: 45rem;
+        padding: 3rem;
     }
 
 `;
@@ -49,6 +52,7 @@ const TextBox = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 1px solid red;////////////////////////////
     @media ${(props)=> props.theme.tabletS} {
         width: 100%;
         height: 50%;
@@ -96,13 +100,13 @@ const Text1 = styled.div`
         font-size: 2rem;
     }
     @media ${(props)=> props.theme.tabletS} {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     @media ${(props)=> props.theme.mobileL} {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 `;
 
@@ -112,7 +116,7 @@ const Text2 = styled.div`
     font-size: 1.5rem;
     font-family: 'BlackBase';
     text-align: center;
-    line-height: 1.8;
+    line-height: 1.5;
     @media ${(props)=> props.theme.tabletL} {
         font-size: 1.3rem;
     }
@@ -120,13 +124,13 @@ const Text2 = styled.div`
         font-size: 1.3rem;
     }
     @media ${(props)=> props.theme.tabletS} {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     @media ${(props)=> props.theme.mobileL} {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 `; 
 
