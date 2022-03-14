@@ -10,6 +10,7 @@ import Section8 from "../../component/LandingSection/Section8";
 import Section9 from "../../component/LandingSection/Section9";
 
 import { Container} from './styles';
+import Section10 from "../../component/LandingSection/Section10";
 
 const Landing = () => {
     return(
@@ -23,6 +24,7 @@ const Landing = () => {
             <Section7/> */}
             <Section8/>
             <Section9/>
+            <Section10/>
         </Container>
     )
 }

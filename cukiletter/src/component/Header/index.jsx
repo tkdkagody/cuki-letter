@@ -9,13 +9,13 @@ const Header = () => {
 
     const documentRef = useRef(document); 
 
+
     const handleScroll = () => {
       const { pageYOffset } = window; //상단으로부터 스크롤 위치
       const deltaY = pageYOffset - pageY; //스크롤 속도
-  
       if (pageYOffset < 20 && deltaY > 0) {
         setShadow(false);
-      } else if (pageYOffset !== 0 && deltaY > 0) {
+      } else if (pageYOffset !==0 && deltaY > 0) {
         setShadow(true);
       } else {
         setShadow(false);
@@ -23,6 +23,7 @@ const Header = () => {
       setPageY(pageYOffset);
     };
   
+    
     const throttle = function (callback, waitTime) {
       let timerId = null;
       return (e) => {
@@ -31,11 +32,12 @@ const Header = () => {
           callback.call(this, e);
           timerId = null;
         }, waitTime);
-      };
+      }; 
     };
-  
+    
+
     const throttleScroll = throttle(handleScroll, 100);
-  
+
     useEffect(() => {
       documentRef.current.addEventListener("scroll", throttleScroll);
       return () =>
@@ -49,11 +51,9 @@ const Header = () => {
         <ContainerShadow><TitleBox><Title>CUKI LETTER</Title></TitleBox></ContainerShadow>
         : <Container><TitleBox><Title>CUKI LETTER</Title></TitleBox></Container>
         }
-       
-        
         </>
-        
-    )
+    );
 }
+
 export default Header; 
 

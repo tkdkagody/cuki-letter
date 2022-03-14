@@ -8,7 +8,7 @@ export const Container = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffedcf;  //색상 바꾸기
+    background-color: white; //색상 바꾸기
 `;
 
 

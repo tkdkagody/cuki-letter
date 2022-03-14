@@ -5,7 +5,7 @@ export const Container = styled.div`
     width: 100%;
     height: 5rem;
     //background-color: #ffedcf; 
-    background-color: #fcfbf6;
+    border-top: 1px solid #f1efef;
     //box-shadow: 0 -5px 15px rgb(57, 57, 57);
     bottom: 0;
     display: flex;
@@ -13,12 +13,13 @@ export const Container = styled.div`
     align-items: center;
 `;
 export const TextBox = styled.div`
-    background-color: #fcfbf6;
-    width: 85%;
+
+    width: 100%;
     height: 5rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+  
 `;
 
 export const Text = styled.div`
@@ -27,4 +28,5 @@ export const Text = styled.div`
     text-align: center;
     cursor: pointer;
     padding: 0 0.5rem;
+    margin-left: 15%;
 `;

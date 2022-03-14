@@ -37,7 +37,7 @@ const Section2 = () => {
 export default Section2; 
 
 const Container = styled.div`
-    width: 85%;
+    width: 100%;
     height: 80vh;
     padding: 4rem 0.2rem;
     background-color: white;  //섹션백그라운드
@@ -72,13 +72,16 @@ const TextBox = styled.div`
     }
 `;
 const ImageBox = styled.div`
-    width: 50%;
+     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     @media ${(props)=> props.theme.tabletS} {
+        width: 63%;
+
+    }
+    @media ${(props)=> props.theme.mobileS} {
         width: 100%;
-        height: 100%;
     }
 `;
 const Img = styled.img`

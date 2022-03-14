@@ -6,7 +6,7 @@ const Section2 = () => {
     const titleImgUrl = "https://images.velog.io/images/beablessing/post/d311198e-b266-4f1c-af51-5f6396755413/%EA%B5%90%EB%A5%98%EA%B8%B0%EA%B4%80%EB%A7%A4%EC%B9%AD.png" ;
     
     return(
-        <Container>
+            <Container>
             <ImageBox>
                 <Img title="cukiletter_title" alt="cukiletter_title" src={titleImgUrl}></Img>
             </ImageBox>
@@ -22,13 +22,15 @@ const Section2 = () => {
                 <Text2>희망하는 조건을 자유롭게 조절할 수 있습니다.</Text2>
             </TextBox>
         </Container>
+
     )
 }
 
 export default Section2; 
 
+
 const Container = styled.div`
-    width: 85%;
+    width: 100%;
     height: 80vh;
     padding: 4rem 0.2rem;
     background-color: #fafaf0;  //섹션백그라운드
@@ -59,7 +61,7 @@ const TextBox = styled.div`
     justify-content: center;
     margin-top: 3rem;
     @media ${(props)=> props.theme.tabletS} {
-        width: 100%;
+        width: 60%;
         height: 50%;
     }
     
@@ -70,8 +72,11 @@ const ImageBox = styled.div`
     align-items: center;
     justify-content: center;
     @media ${(props)=> props.theme.tabletS} {
+        width: 63%;
+    }
+
+    @media ${(props)=> props.theme.mobileS} {
         width: 100%;
-        height: 100%;
     }
 `;
 const Img = styled.img`
@@ -114,7 +119,7 @@ const Text1 = styled.div`
         font-size: 1.5rem;
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 `;
 
@@ -140,7 +145,7 @@ const Text2 = styled.div`
         font-size: 1.3rem;
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 `; 
 
@@ -162,4 +167,10 @@ const Circle = styled.div`
     text-align: center;
     font-weight: bold;
     font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
+    @media ${(props)=> props.theme.mobileM} {
+        width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 0.7rem;
+    }
 `; 
