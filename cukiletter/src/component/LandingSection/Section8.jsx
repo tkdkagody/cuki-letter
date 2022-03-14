@@ -11,7 +11,7 @@ const Section8 = () => {
                     <Img title="cukiletter_title" alt="cukiletter_title" src={titleImgUrl}></Img>
                 </ImageBox>
                 <TextBox>
-                    <Text1><text style={{color:"#2ebb77"}}>쿠키레터</text>는 </Text1>
+                    <Text1><text style={{color:"#2ebb77", fontWeight:"bold"}}>쿠키레터</text>는 </Text1>
                     <Text1>교육자와 학습자에게 귀 기울입니다.</Text1>
                 </TextBox>
             </Titlebox>
@@ -113,7 +113,7 @@ const Text1 = styled.div`
     padding: 0.2rem 0.5rem;
     font-size: 2rem;
     font-weight: bold; 
-    font-family: 'BlackBase';
+    font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
     text-align: center;
     line-height: 1;
     color: #333; 

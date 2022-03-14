@@ -105,7 +105,7 @@ const Text1 = styled.div`
     padding: 0.2rem 0.5rem;
     font-size: 1.8rem;
     font-weight: bold; 
-    font-family: 'BlackBase';
+    font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
     text-align: center;
     line-height: 2;
     color:#2ebb77;
@@ -132,7 +132,7 @@ const Text2 = styled.div`
     padding: 0.2rem 0.5rem;
     font-size: 1.3rem;
     font-weight: bold; 
-    font-family: 'BlackBase';
+    font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
     text-align: center;
     line-height: 1.5;
     color: #c2c2c2;
@@ -158,7 +158,7 @@ const Text3 = styled.div`
     padding: 0.2rem 0.5rem;
     font-size: 1.3rem;
     font-weight: bold; 
-    font-family: 'BlackBase';
+    font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
     text-align: left;
     line-height: 1.5;
     color: #707070;

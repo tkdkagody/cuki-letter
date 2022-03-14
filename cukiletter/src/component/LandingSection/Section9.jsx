@@ -37,6 +37,7 @@ const Text3 = styled.div`
     font-weight: bold; 
     text-align: center;
     line-height: 2;
+    font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
     @media ${(props)=> props.theme.tabletL} {
         font-size: 1.7rem;
      
@@ -61,6 +62,9 @@ const BtnImageBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media ${(props)=> props.theme.mobileM} {
+       
+    }
 `;
 const BtnImg = styled.img`
     margin: 5rem 0;
@@ -68,9 +72,10 @@ const BtnImg = styled.img`
     border: none;
     width: 15rem;
     font-weight: bold;
-    font-family: 'BlackBase';
+    font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
     border-radius: 0.5rem;
     font-size: 1.4rem;
     cursor: pointer;
+
 
 `;
