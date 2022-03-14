@@ -7,15 +7,20 @@ const Section2 = () => {
     
     return(
         <Container>
-            <TextBox>
-                <Text1>교류 기관 매칭 서비스</Text1>
-                <Text2>교류 희망 기관은 기관등록을 통해 <br></br>매칭 희망 정보를 업데이트 합니다.</Text2>
-                <Text2>교류 기간<br></br>사용 언어<br></br>교류 방식</Text2>
-                <Text2>희망하는 조건을 자유롭게 조절할 수 있습니다.</Text2>
-            </TextBox>
             <ImageBox>
                 <Img title="cukiletter_title" alt="cukiletter_title" src={titleImgUrl}></Img>
             </ImageBox>
+            <TextBox>
+                <Text1>교류 기관 매칭 서비스</Text1>
+                <Text2>교류 희망 기관은 기관등록을 통해 <br></br>매칭 희망 정보를 업데이트 합니다.</Text2>
+                {/* <Text2>교류 기간<br></br>사용 언어<br></br>교류 방식</Text2> */}
+                <CircleBox>
+                    <Circle>교류기간</Circle>
+                    <Circle>사용언어</Circle>
+                    <Circle>교류방식</Circle>
+                </CircleBox>
+                <Text2>희망하는 조건을 자유롭게 조절할 수 있습니다.</Text2>
+            </TextBox>
         </Container>
     )
 }
@@ -25,7 +30,7 @@ export default Section2;
 const Container = styled.div`
     width: 85%;
     height: 80vh;
-    padding: 2rem 0.2rem;
+    padding: 4rem 0.2rem;
     background-color: #fafaf0;  //섹션백그라운드
     display: flex;
     flex-direction: row;
@@ -92,6 +97,8 @@ const Text1 = styled.div`
     font-family: 'BlackBase';
     text-align: center;
     line-height: 2;
+    color:#2ebb77;
+
     @media ${(props)=> props.theme.tabletL} {
         font-size: 2rem;
     }
@@ -113,9 +120,11 @@ const Text2 = styled.div`
     margin: 1rem 0;
     padding: 0.2rem 0.5rem;
     font-size: 1.3rem;
+    font-weight: bold; 
     font-family: 'BlackBase';
     text-align: center;
     line-height: 1.5;
+    color: #707070;
     @media ${(props)=> props.theme.tabletL} {
         font-size: 1.3rem;
     }
@@ -133,3 +142,20 @@ const Text2 = styled.div`
     }
 `; 
 
+const CircleBox = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+const Circle = styled.div`
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 1px solid gainsboro;
+    color: #333;
+    line-height: 6rem;
+    text-align: center;
+    font-weight: bold;
+`; 
