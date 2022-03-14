@@ -39,15 +39,15 @@ const Section1 = () => {
 
             <TextComplex>
                 <Text6Box>
-                    <Text6><text style={{color:"#2ebb77"}}>쿠키레터</text>는 글로벌 교류의</Text6>
-                    <Text6><text style={{color:"#2ebb77"}}>A to Z까지 지원하는 플랫폼</text>입니다.</Text6>
+                    <Text6><text style={{color:"#2ebb77", fontWeight:"bold"}}>쿠키레터</text>는 글로벌 교류의</Text6>
+                    <Text6><text style={{color:"#2ebb77", fontWeight:"bold"}}>A to Z까지 지원하는 플랫폼</text>입니다.</Text6>
                 </Text6Box>
             </TextComplex>
 
             <TextComplex>
                 <Text6Box>
-                    <Text6><text style={{color:"#ea4568",}}>선생님은 교육에만 집중하세요</text></Text6>
-                    <Text6><text style={{fontSize:"1.2rem"}}>머리 아픈 행정처리는 저희가 해드릴게요</text></Text6>
+                    <Text6><text style={{color:"#ea4568", fontWeight:"bold"}}>선생님은 교육에만 집중하세요</text></Text6>
+                    <Text6><text style={{ fontWeight:"bold"}}>머리 아픈 행정처리는 저희가 해드릴게요</text></Text6>
                 </Text6Box>
             </TextComplex>
             
