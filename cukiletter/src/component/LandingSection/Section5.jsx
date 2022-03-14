@@ -123,7 +123,7 @@ const Text1 = styled.div`
         font-size: 1.5rem;
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 `;
 
@@ -149,7 +149,7 @@ const Text2 = styled.div`
         font-size: 1.3rem;
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 `; 
 
@@ -175,6 +175,6 @@ const Text3 = styled.div`
         font-size: 1.3rem;
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 `; 

@@ -57,10 +57,12 @@ const TextBox = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 3rem;
     @media ${(props)=> props.theme.tabletS} {
         width: 100%;
         height: 50%;
     }
+    
 `;
 const ImageBox = styled.div`
     width: 50%;
@@ -147,6 +149,7 @@ const CircleBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 2rem 0;
 `;
 
 const Circle = styled.div`

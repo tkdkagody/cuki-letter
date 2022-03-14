@@ -61,10 +61,9 @@ export default Section1;
 
 
 const Container = styled.div`
-
     width: 85%;
     padding: 2.5rem 0;
-    background-color: #fcfbf6;  //섹션백그라운드
+    background-color: white; //섹션백그라운드
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,7 +94,7 @@ const TextAIO = styled.div`
     padding: 0.2rem 0.5rem;
     font-size: 2rem;
     font-weight: bold; 
-    font-family: 'BlackBold';
+    font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
     text-align: center;
     line-height: 2;
     @media ${(props)=> props.theme.tabletL} {
@@ -111,18 +110,18 @@ const TextAIO = styled.div`
         font-size: 2rem;
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 `;
 const TextMore = styled.div`
     margin-top: 1.5rem;
     padding: 0.2rem 0.5rem;
     font-size: 1.6rem;
-    font-family: 'BlackBase';
+    font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
     text-align: center;
     color: #707070;
     font-weight: bold;
-   
+    
     @media ${(props)=> props.theme.tabletL} {
         font-size: 2rem;
     }
@@ -134,9 +133,11 @@ const TextMore = styled.div`
     }
     @media ${(props)=> props.theme.mobileL} {
         font-size: 1.8rem;
+        
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
+
     }
 `;
 
@@ -144,7 +145,7 @@ const TextWeDo = styled.div`
     margin-bottom: 1.5rem;
     padding: 0.2rem 0.5rem;
     font-size: 2.1rem;
-    font-family: 'BlackBase';
+    font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
     text-align: center;
     color: #333333;
     font-weight: bold;
@@ -162,7 +163,7 @@ const TextWeDo = styled.div`
         font-size: 1.8rem;
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
     }
 `;
 
@@ -179,7 +180,7 @@ const BtnImg = styled.img`
     border: none;
     width: 15rem;
     font-weight: bold;
-    font-family: 'BlackBase';
+    font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
     border-radius: 0.5rem;
     font-size: 1.4rem;
     cursor: pointer;
@@ -207,7 +208,7 @@ const TextWorld = styled.div`
     margin: 2rem 0;
     padding: 0.2rem 0.5rem;
     font-size: 1.6rem;
-    font-family: 'BlackBase';
+    font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
     
     line-height: 1.8;
     color: #333333;
@@ -235,12 +236,13 @@ const TextWorld = styled.div`
     }
     @media ${(props)=> props.theme.mobileL} {
         width: 70%;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
 
     }
     @media ${(props)=> props.theme.mobileM} {
-        width: 80%;
-        font-size: 1.6rem;
+        width: 95%;
+        font-size: 1rem;
+        text-align: center;
     }
 `; 
 
@@ -251,7 +253,7 @@ const TextBut = styled.div`
     font-size: 5em;
     color: #c2c2c2;
     font-weight: bold;
-    font-family: 'BlackBold';
+    font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
     text-align: left;
     @media ${(props)=> props.theme.laptop} {
         width: 40%;
@@ -281,6 +283,7 @@ const TextBut = styled.div`
     @media ${(props)=> props.theme.mobileM} {
         width: 80%;
         font-size: 3rem;
+        text-align: center;
     }
 `;
 
@@ -292,12 +295,10 @@ const TextComplex = styled.div`
  @media ${(props)=> props.theme.laptop} {
         width: 40%;
         font-size: 3rem;
-     
     }
     @media ${(props)=> props.theme.tabletL} {
         width: 42%;
         font-size: 3rem;
-     
     }
     @media ${(props)=> props.theme.tabletM} {
         width: 50%;
@@ -312,11 +313,12 @@ const TextComplex = styled.div`
     @media ${(props)=> props.theme.mobileL} {
         width: 70%;
         font-size: 3rem;
-
     }
     @media ${(props)=> props.theme.mobileM} {
         width: 80%;
         font-size: 3rem;
+        text-align: center;
+ 
     }
 `;
 
@@ -329,7 +331,6 @@ const Text6QueBox = styled.div`
     }
     @media ${(props)=> props.theme.tabletL} {
         width: 55%;
-
     }
     @media ${(props)=> props.theme.tabletM} {
         width: 55%;
@@ -344,8 +345,7 @@ const Text6QueBox = styled.div`
     
     }
     @media ${(props)=> props.theme.mobileM} {
-        width: 58%;
-
+        width: 80%;
     }
 
 
@@ -378,7 +378,7 @@ const Text6 = styled.div`
         font-size: 1.3rem;
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 `; 
 

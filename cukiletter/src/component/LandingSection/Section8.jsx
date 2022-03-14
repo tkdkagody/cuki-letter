@@ -63,7 +63,6 @@ const ImageBox = styled.div`
     @media ${(props)=> props.theme.mobileM} {
         width: 20%;
     }
-
 `;
 
 
@@ -134,7 +133,7 @@ const Text1 = styled.div`
        
     }
     @media ${(props)=> props.theme.mobileM} {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 `;
 
