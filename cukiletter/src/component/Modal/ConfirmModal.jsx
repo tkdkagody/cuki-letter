@@ -12,7 +12,9 @@ const ConfirmModal = ({setModalOpen}) => {
     return(
         <ModalContainer>
             <div>
-                <p>문의메일 전달이 완료되었습니다.</p> 
+                <p>문의메일 전달이 완료되었습니다.
+                    
+                </p> 
                 <button onClick={closeBtn}>확인</button>
             </div>
         </ModalContainer>
@@ -49,6 +51,7 @@ const ModalContainer = styled.div`
             font-size: 1rem;
             color: #777;
             line-height: 1.8rem;
+            font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
         }
         & > button {
             margin: 5rem 5.5rem;

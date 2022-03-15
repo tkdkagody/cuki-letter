@@ -24,13 +24,13 @@ const Section10 = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         if(values.name === ""){
-            setErrorMsg("이름 채워줘");
+            setErrorMsg("이름을 입력해주세요.");
         }else if(values.phone === ""){
-            setErrorMsg("폰번호 채워줘")
+            setErrorMsg("휴대폰번호를 입력해주세요.")
         }else if(values.email ===""){
-            setErrorMsg("이메일 채워줘");
+            setErrorMsg("이메일을 입력해주세요.");
         }else if(values.message ===""){
-            setErrorMsg("메세지 채워줘")
+            setErrorMsg("문의사항을 입력해주세요.")
         }else {
             setErrorMsg("")
             send('service_cukiletter', 'template_kmncqmj', values)
@@ -69,7 +69,7 @@ const Section10 = () => {
                     <TextPhone placeholder="휴대폰번호를 입력해주세요." name="phone" value={values.phone} onChange={handleChange}></TextPhone>
                     <TextEmail placeholder="이메일주소를 입력해주세요." name="email" value={values.email} onChange={handleChange}></TextEmail>
                     <TextMessage placeholder="문의사항을 입력해주세요." name="message" value={values.message} onChange={handleChange}></TextMessage>
-                    <span>{errorMsg}</span>
+                    <Error>{errorMsg}</Error>
                     <BtnBox>
                         <Btn onClick={onSubmit} type="submit">문의하기</Btn>
                     </BtnBox>
@@ -200,3 +200,12 @@ const Btn = styled.button`
     }
 `;
 
+
+const Error = styled.div`
+    height: 5rem;
+    line-height: 4rem;
+    text-align: center;
+    color: #ce0505;
+    font-size: 0.8rem;
+    font-family: '"맑은 고딕", "Malgun Gothic", "Noto Sans", sans-serif;';
+`;
