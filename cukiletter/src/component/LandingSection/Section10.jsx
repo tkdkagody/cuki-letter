@@ -1,37 +1,60 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import{ init, send } from '@emailjs/browser';
+import ConfirmModal from "../Modal/ConfirmModal";
 
 
 
 const Section10 = () => {
-    //email
-    useEffect(()=> {
-        init("cA1TVy2B1poEQhfTO");
-    },[]);
-
     const [values, setValues] = useState({
         name: '',
         phone:'',
         email:'',
         message:'',
     });
+
+    const [modalOpen, setModalOpen] = useState(false);
+    const [errorMsg, setErrorMsg] = useState(false);
+
+    //email
+    useEffect(()=> {
+        init("cA1TVy2B1poEQhfTO");
+    },[]);
+
     const onSubmit = (e) => {
         e.preventDefault();
-        send('service_cukiletter', 'template_kmncqmj', values)
-        .then((res)=> {
-            console.log("success!!", res.status, res.text);
-        })
-        .catch((err)=> {
-            console.log("failed",err);
-        })
+        if(values.name === ""){
+            setErrorMsg("이름 채워줘");
+        }else if(values.phone === ""){
+            setErrorMsg("폰번호 채워줘")
+        }else if(values.email ===""){
+            setErrorMsg("이메일 채워줘");
+        }else if(values.message ===""){
+            setErrorMsg("메세지 채워줘")
+        }else {
+            setErrorMsg("")
+            send('service_cukiletter', 'template_kmncqmj', values)
+            .then((res)=> {
+                console.log("success!!", res.status, res.text);
+                setModalOpen(true);
+    
+            })
+            .catch((err)=> {
+                console.log("failed",err);
+                setModalOpen(false);
+            });
+        }
+        
     }
 
     const handleChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value });
       };
 
-    console.log(values,"sdfsdf");
+
+    
+
+
     return(
         <Container>
            
@@ -46,14 +69,15 @@ const Section10 = () => {
                     <TextPhone placeholder="휴대폰번호를 입력해주세요." name="phone" value={values.phone} onChange={handleChange}></TextPhone>
                     <TextEmail placeholder="이메일주소를 입력해주세요." name="email" value={values.email} onChange={handleChange}></TextEmail>
                     <TextMessage placeholder="문의사항을 입력해주세요." name="message" value={values.message} onChange={handleChange}></TextMessage>
+                    <span>{errorMsg}</span>
                     <BtnBox>
                         <Btn onClick={onSubmit} type="submit">문의하기</Btn>
                     </BtnBox>
                 </form>
-                </TextBox>
+                </TextBox>      
                 
             </ContextBox>
-         
+            {modalOpen ? <ConfirmModal setModalOpen={setModalOpen}/> : null}
         </Container>
     )
 }
@@ -175,3 +199,4 @@ const Btn = styled.button`
         color: white;
     }
 `;
+
