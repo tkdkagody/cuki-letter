@@ -64,11 +64,11 @@ const Section10 = () => {
                     <span>쿠키레터에게 궁금한 점이 있다면 메일을 보내주세요</span>
                 </TitleBox>
                 <TextBox>
-                <form onSubmit={onSubmit} style={{}}>
-                    <TextName placeholder="이름을 입력해주세요." name="name" value={values.name} onChange={handleChange}></TextName>
-                    <TextPhone placeholder="휴대폰번호를 입력해주세요." name="phone" value={values.phone} onChange={handleChange}></TextPhone>
-                    <TextEmail placeholder="이메일주소를 입력해주세요." name="email" value={values.email} onChange={handleChange}></TextEmail>
-                    <TextMessage placeholder="문의사항을 입력해주세요." name="message" value={values.message} onChange={handleChange}></TextMessage>
+                <form onSubmit={onSubmit} style={{width:"100%",display:"flex",flexDirection:"column"}}>
+                <TextName placeholder="이름을 입력해주세요." name="name" value={values.name} onChange={handleChange}></TextName>
+                <TextPhone placeholder="휴대폰번호를 입력해주세요." name="phone" value={values.phone} onChange={handleChange}></TextPhone>
+                <TextEmail placeholder="이메일주소를 입력해주세요." name="email" value={values.email} onChange={handleChange}></TextEmail>
+                <TextMessage placeholder="문의사항을 입력해주세요." name="message" value={values.message} onChange={handleChange}></TextMessage>
                     <Error>{errorMsg}</Error>
                     <BtnBox>
                         <Btn onClick={onSubmit} type="submit">문의하기</Btn>
@@ -99,7 +99,29 @@ const ContextBox = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    @media ${(props)=> props.theme.tabletL} {
+        width: 70%;
+       
+    }
+    @media ${(props)=> props.theme.tabletM} {
+        width: 70%;
+       
+       
+    }
+    @media ${(props)=> props.theme.tabletS} {
+        width: 75%;
+       
+       
+    }
+    @media ${(props)=> props.theme.mobileL} {
+        width: 85%;
+       
+       
+    }
+    @media ${(props)=> props.theme.mobileM} {
+        width: 98%;
+       
+    }
 `;
 
 const TitleBox = styled.div`
@@ -140,6 +162,9 @@ const TextName = styled.input`
     color: #777777;
     margin-bottom:1.2rem;
     border:none;
+    @media ${(props)=> props.theme.mobileM} {
+        width: 80%;
+    }
 
 `;
 const TextPhone = styled.input`
@@ -151,6 +176,9 @@ background-color: #f3f3f3;
     color: #777777;
     margin-bottom:1.2rem;
     border:none;
+    @media ${(props)=> props.theme.mobileM} {
+        width: 80%;
+    }
 `;
 const TextEmail = styled.input`
 background-color: #f3f3f3;
@@ -161,6 +189,9 @@ background-color: #f3f3f3;
     color: #777777;
     margin-bottom:1.2rem;
     border:none;
+    @media ${(props)=> props.theme.mobileM} {
+        width: 80%;
+    }
 `;
 const TextMessage = styled.textarea`
     background-color: #f3f3f3;
@@ -175,6 +206,9 @@ const TextMessage = styled.textarea`
     overflow-y: scroll;
     resize: none;
     line-height: 2;
+    @media ${(props)=> props.theme.mobileM} {
+        height: 10rem;
+    }
 `;
 
 
@@ -202,8 +236,8 @@ const Btn = styled.button`
 
 
 const Error = styled.div`
-    height: 5rem;
-    line-height: 4rem;
+    height: 2rem;
+    line-height: 1rem;
     text-align: center;
     color: #ce0505;
     font-size: 0.8rem;
