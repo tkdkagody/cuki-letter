@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import AOS from "aos";
 
 const Section2 = () => {
-
+    AOS.init();
 
     const [width, setWidth] = useState(window.innerWidth);
     const handleResize = () => setWidth(window.innerWidth);
@@ -16,7 +17,8 @@ const Section2 = () => {
     
     return(
         <Container>
-            {width < 1025 ? <ImageBox>
+            {width < 1025 ? <ImageBox  data-aos="fade-left"
+            data-aos-duration="1000">
                 <Img title="cukiletter_title" alt="cukiletter_title" src={titleImgUrl}></Img>
             </ImageBox> :             
             null }
@@ -26,7 +28,8 @@ const Section2 = () => {
                 <Text3>교류학급 공동 게시판에서 <br></br>한 번에 관리합니다.</Text3>
             </TextBox>
             {width < 1025 ? null :
-            <ImageBox>
+            <ImageBox data-aos="fade-left"
+            data-aos-duration="1000">
             <Img title="cukiletter_title" alt="cukiletter_title" src={titleImgUrl}></Img>
         </ImageBox>
             }

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-
+import AOS from "aos";
 
 
 const Section5 = () => {
-    
+    AOS.init();
 
     const [width, setWidth] = useState(window.innerWidth);
     const handleResize = () => setWidth(window.innerWidth);
@@ -18,7 +18,9 @@ const Section5 = () => {
     
     return(
         <Container>
-            {width < 1025 ? <ImageBox>
+            {width < 1025 ? <ImageBox 
+            data-aos="fade-left"
+            data-aos-duration="1000">
                 <Img title="cukiletter_title" alt="cukiletter_title" src={titleImgUrl}></Img>
             </ImageBox> :             
             null }
@@ -28,7 +30,10 @@ const Section5 = () => {
                 <Text3>단순한 글편지부터 그림편지, 영상편지까지<br></br>아이들의 수준에 맞게 펜팔이 가능합니다.</Text3>
             </TextBox>
             {width < 1025 ? null :
-            <ImageBox>
+            <ImageBox 
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            >
             <Img title="cukiletter_title" alt="cukiletter_title" src={titleImgUrl}></Img>
         </ImageBox>
             }

@@ -1,19 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import AOS from "aos";
+
+
 
 const Section2 = () => {
-
+    AOS.init();
     const titleImgUrl = "https://images.velog.io/images/beablessing/post/d311198e-b266-4f1c-af51-5f6396755413/%EA%B5%90%EB%A5%98%EA%B8%B0%EA%B4%80%EB%A7%A4%EC%B9%AD.png" ;
     
     return(
             <Container>
-            <ImageBox>
+            <ImageBox 
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            >
                 <Img title="cukiletter_title" alt="cukiletter_title" src={titleImgUrl}></Img>
             </ImageBox>
             <TextBox>
                 <Text1>교류 기관 매칭 서비스</Text1>
                 <Text2>교류 희망 기관은 기관등록을 통해 <br></br>매칭 희망 정보를 업데이트 합니다.</Text2>
-                {/* <Text2>교류 기간<br></br>사용 언어<br></br>교류 방식</Text2> */}
                 <CircleBox>
                     <Circle>교류기간</Circle>
                     <Circle>사용언어</Circle>
