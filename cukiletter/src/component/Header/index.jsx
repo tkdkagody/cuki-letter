@@ -45,10 +45,18 @@ const Header = () => {
     }, [pageY]);
 
 
+    const goHeader = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+
+
     return(
         <>
         {shadow?
-        <ContainerShadow><TitleBox><Title>CUKI LETTER</Title></TitleBox></ContainerShadow>
+        <ContainerShadow><TitleBox><Title onClick={goHeader}>CUKI LETTER</Title></TitleBox></ContainerShadow>
         : <Container><TitleBox><Title>CUKI LETTER</Title></TitleBox></Container>
         }
         </>
